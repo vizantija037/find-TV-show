@@ -1,0 +1,207 @@
+body{
+    box-sizing: border-box;
+    font-family: 'Noto';
+    background-color:#000000;
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;  
+}
+.nav-fixed {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(163, 40, 61);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    border-bottom: 3px solid rgb(240, 180, 140);
+    z-index: 10;
+}
+.nav-left{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.nav-left li{
+    display: flex;
+    list-style: none;
+    width: 6rem;
+    font-size: 16px;
+    justify-content: center;
+}
+.nav-left li a{
+    display: flex;
+    list-style: none;
+    width: 6rem;
+    height: 100%;
+    font-size: 18px;
+    justify-content: center;
+    line-height: 50px;
+    text-decoration: none;
+    color: white;
+    transition: all ease-in-out 0.2s;
+    margin-right: 10px;
+}
+.nav-left li a:hover{
+    background-color: rgb(126, 31, 47);
+}
+.nav-left li a:active{
+    background-color: rgb(209, 96, 81);
+}
+
+.logo, .nav-left, .nav-right{
+    width: 32%;
+}
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 600;
+}
+.nav-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    font-size: 18px;
+}
+.search-icon{
+    margin-right: 14px;
+    transform: translateY(2px);
+    color:white;
+    z-index: 2;
+}
+.search-icon.active{
+    color: #a3283e;
+}
+.search-icon:hover{
+    cursor: pointer;
+}
+.signin-button{
+    width: 7rem;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(209, 96, 81);
+    border-radius: 30px;
+    transition: all ease-in-out 0.2s;
+    font-size: 16px;
+}
+.signin-button:hover{
+    background-color:white;
+    color: #c3314b;
+    cursor: pointer;
+}
+.input-search{
+    position: fixed;
+    width: 0;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    border-radius: 30px;
+    font-size: 14px;
+    border: none;
+    padding: 0 6px;
+    right: 140px;
+    top: 24px;
+    display: flex;
+    opacity: 0;
+    transition: all cubic-bezier(0.62, -0.37, 0.39, 1.46) 0.6s;
+
+}
+.inpute-search-active{
+    width: 10rem;
+    opacity: 1;
+}
+.logo-text{
+    font-size: 20px;
+
+}
+.tv-icon{
+    font-size: 50px;
+    transform: translateY(-5px);
+}
+.input-search:focus{
+    outline: none;
+}
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    background-color: #a3283e;
+    color: rgb(240, 180, 140);
+    border-top: 3px solid rgb(240, 180, 140);
+}
+.banner-main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    background-color: black;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('./img/slider1.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+   
+}
+.logo-in-banner{
+    font-size:100px;
+    font-weight: 300;
+    margin-bottom: 30px;
+
+}
+.h1-in-banner{
+    font-size: 70px;
+    font-weight: 900;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    
+}
+.h5-in-banner{
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transform: translateY(-15px);
+}
+.join-for-free{
+    width: 15rem;
+    height: 3.8rem;
+    border-radius: 50px;
+    border: none;
+    margin-top: 20px;
+    padding: 0;
+    background-color: #d160511e;
+    border: 2px solid white;
+    color: white;
+    font-weight: 900;
+    font-size:1.1rem;
+    letter-spacing: 2px;
+    transition: ease-in-out all 0.2s;
+}
+.join-for-free:hover{
+    cursor: pointer;
+    background:#d1605141;
+}
