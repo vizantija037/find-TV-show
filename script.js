@@ -6,7 +6,6 @@ window.addEventListener("scroll", () => {
   let contentPosition = content.getBoundingClientRect().top;
   let screenPosition = window.innerHeight / 8;
   if (contentPosition < screenPosition) {
-    console.log("ovde");
     nav.classList.add("nav-fixed-active");
     button.classList.add("active");
   } else {
@@ -43,21 +42,24 @@ function toFetch() {
 }
 
 let allShowsLocalStorage = localStorage.getItem("main");
-let cardHover = document.querySelectorAll(".card-heading");
+
 
 const allShowsObject = JSON.parse(allShowsLocalStorage);
 
+
 let output = `<h1 class="heading">All Shows</h1>`;
-allShowsObject.forEach((show) => {
+allShowsObject.forEach(show => {
+  if(show._embedded.show.image){
   output += `
-<div class="card-main" id="${show._embedded.show.id}" style="background-image: url(${show._embedded.show.image.original})">
+<div class="card-main" id="${show._embedded.show.id}" style="background-image:url(${show._embedded.show.image.original})" >
 <p class="card-heading">${show._embedded.show.name}</p>
 <a href="" class="card-details" data-id="${show._embedded.show.id}">Show more</a>
 
 </div>
 </div>
 `;
-  document.querySelector(".content").innerHTML = output;
+  }
+  content.innerHTML = output;
 
- 
+  
 });
