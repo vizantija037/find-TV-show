@@ -2,13 +2,16 @@ let content = document.querySelector(".content");
 
 window.addEventListener("scroll", () => {
   let nav = document.querySelector(".nav-fixed");
+  let button = document.getElementById('signin-button');
   let contentPosition = content.getBoundingClientRect().top;
   let screenPosition = window.innerHeight / 8;
   if (contentPosition < screenPosition) {
     console.log("ovde");
     nav.classList.add("nav-fixed-active");
+    button.classList.add("active");
   } else {
     nav.classList.remove("nav-fixed-active");
+    button.classList.remove("active");
   }
 });
 

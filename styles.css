@@ -105,6 +105,11 @@ body {
   transition: all ease-in-out 0.2s;
   font-size: 16px;
 }
+.signin-button.active {
+    width: 8rem;
+    display: flex;
+    height: 30px;
+}
 .signin-button:hover {
   background-color: white;
   color: #c3314b;
