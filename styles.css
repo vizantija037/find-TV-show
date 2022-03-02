@@ -1,7 +1,7 @@
 body {
   box-sizing: border-box;
   font-family: "Noto";
-  background-color: #000000;
+
   margin: 0;
   padding: 0;
 }
@@ -184,6 +184,8 @@ body {
   font-weight: 900;
   letter-spacing: 8px;
   text-transform: uppercase;
+  width: 100%;
+  text-align: center;
 }
 .h5-in-banner {
   font-size: 25px;
@@ -206,6 +208,9 @@ body {
   font-size: 1.1rem;
   letter-spacing: 2px;
   transition: ease-in-out all 0.2s;
+}
+.back-to-all{
+    width: 20rem;
 }
 .join-for-free:hover {
   cursor: pointer;
@@ -282,9 +287,10 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  justify-content: left;
 }
 .card-main {
-  width: 20rem;
+  width: 15rem;
   height: 20rem;
   display: flex;
   flex-direction: column;
@@ -292,11 +298,28 @@ body {
   justify-content: space-between;
   align-items: center;
   background-position: center center;
-  background-size: 100% auto;
+  background-size: 100% 100%;
   object-fit: fill;
-  border: 8px solid white;
+  border: 15px solid white;
   transition: all ease-in-out 0.2s;
+  background-repeat: no-repeat;
 }
+.card-small {
+    width: 11rem;
+    height: 17rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-position: center center;
+    background-size: auto 100%;
+    object-fit: fill;
+    border: 2px solid #6d362f;
+    z-index: 10;
+    background-repeat: no-repeat;
+
+}    
 .card-main:hover {
     transform: scale(0.95);
 
@@ -305,36 +328,39 @@ body {
 .card-heading {
 
   color: white;
-  height: 4rem;
+  height: 3rem;
   display: flex;
-  background: #000000bd;
+  background-color: rgba(0, 0, 0, 0.692);
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 300;
   text-transform: uppercase;
   width: 100%;
   text-align: center;
+  padding: 10px;
 }
 .card-details {
     display: flex;
-    color: black;
-    height: 2.5rem;
+    color: white;
+    height: 3rem;
     display: flex;
-    background: rgba(255, 255, 255, 0.658);
+    background: #7ca328;
     justify-content: center;
     align-items: center;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 300;
     width: 100%;
     text-align: center;
     margin-top: 30px;
     text-decoration: none;
-    transition: all ease-in-out 0.2s;
+    transition: all cubic-bezier(1, -0.47, 0, 1.48) 0.3s;
+  
   }
   .card-details:hover {
-    color: white;
-    background: rgba(0, 0, 0, 0.712);
+    height: 8rem;
+    background-color: rgba(163, 40, 60, 0.849);
+    text-transform: uppercase;
   }
 
 .card-hover {
@@ -366,4 +392,35 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
   line-height: 2rem;
+}
+.description-holder{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 80%;
+    height: auto;
+    padding-top: 7rem;
+    padding-left: 2rem;
+    
+}
+.show-description{
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    text-align: justify;
+    line-height: 1.4rem;
+}
+
+.imdb-img {
+    display: flex;
+    width: 6rem;
+    height: auto;
+    border-radius: 5px;
+    transition: all ease-in-out 0.15s;
+
+}
+.imdb-img:hover {
+    box-shadow: 0 0 8px 0 rgb(98, 98, 98);
+    transform: scale(1.07);
+    cursor: pointer;
 }
