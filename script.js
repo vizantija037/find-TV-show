@@ -37,7 +37,7 @@ function toFetch() {
   fetch("https://api.tvmaze.com/schedule/full")
     .then((resp) => resp.json())
     .then((data) => {
-      localStorage.setItem("main", JSON.stringify(data.slice(160, 250)));
+      localStorage.setItem("main", JSON.stringify(data.slice(90, 130)));
     });
 }
 
