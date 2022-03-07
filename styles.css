@@ -175,12 +175,12 @@ body {
   color: white;
 }
 .logo-in-banner {
-  font-size: 100px;
+  font-size: 5rem;
   font-weight: 300;
   margin-bottom: 30px;
 }
 .h1-in-banner {
-  font-size: 70px;
+  font-size: 4.5rem;
   font-weight: 900;
   letter-spacing: 8px;
   text-transform: uppercase;
@@ -188,7 +188,7 @@ body {
   text-align: center;
 }
 .h5-in-banner {
-  font-size: 25px;
+  font-size: 2rem;
   font-weight: 300;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -445,13 +445,48 @@ body {
 .span-genres{
   color: #a3283e;
 }
-.cast-all {
+.cast-all, .episodes-all, .seasons-all {
   display: flex;
   flex-direction: column;
   width: 100%;
   justify-content: center;
   align-items: left;
 }
+.episodes-heading{
+  width: 100%;
+  background-color:#7ca328;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: white;
+}
+.episode-holder {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size:0.8rem;
+}
+.episode-holder:hover {
+  background-color: #7ca328;
+  color: white;
+
+}
+
+.episodes-number, .episodes-name, .episodes-season, .episodes-date, .episode-number, .episode-name, .episode-season, .episode-date {
+  display: flex;
+  flex-direction: column;
+  height: 2rem;
+  justify-content: center;
+  align-items: left;
+  width: 100%;
+  border-left: 2px solid rgb(255, 255, 255);
+  padding-left: 1rem;
+}
+.episodes-number, .episodes-season, .episode-number, .episode-season{
+  width: 50%;
+}
+
 .list{
   display: flex;
   flex-basis: 100%;
